@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    height: 100vh;
+    width: 100vw;
+    background: url(../images/4-04.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.navbar a{
+    color: rgb(91, 10, 149);
+}
+.navbar .icone{
+    width: 18em;
+    height: 8em;
+}
+
+.navbar .nav-list ul{
+    display: flex;
+}
+
+.navbar .nav-list ul li{
+    margin: 0 10px;
+    font-size: 15px;
+}
+
+.navbar .menu{
+    position: absolute;
+    display: none;
+    right: 45px;
+    top: 45px;
+    width: 50px;
+    height: 35%;
+}
+
+.container{
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    width: 39%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container h2{
+    color: aqua;
+    font-size: 35px;
+}
+
+.container form{
+    text-align: left;
+    padding: 25px 0;
+    background-color:white;
+    border-radius: 8px;
+    align-items: center;
+}
+.container form .sub{
+    padding: 0 25px;
+    text-align: left;
+    align-items: center;
+}
+.container form .sub p{
+    margin: 2px;
+    font-size: 12px;
+}
+input{
+    border-radius: 6px;
+    margin: 10px 2px;
+    height: 50px;
+    width: 40vh;
+    text-align: center;
+    font-size: 25px;
+}
+
+button{
+    background-color: aqua;
+    width: 101px;
+    height: 50px;
+    border-radius: 6px;
+    padding: 4px;
+    border-color: aqua;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:rgb(16, 235, 235); 
+}
+
+@media screen and (max-width:900px){
+    .navbar .menu{
+        display: block;
+        z-index: 2;
+    }
+
+    .nav-list{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(30, 29, 29, 0.728);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        margin-left: -100%;
+        transition:all ease 0.5s;
+        z-index: 2;
+    }
+
+    .nav-list.mobile-menu{
+        margin-left: 0;
+    }
+
+    .nav-list ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: beige;
+    }
+
+    .navbar .nav-list ul li{
+        margin: 20px 10px;
+        font-size: 20px;
+    }
+
+    .nav-list ul a{
+        color: beige;
+    }
+
+    .navbar .icone{
+        width: 18em;
+        height: 8em;
+        top: 45px;
+        left:45px;
+    }
+
+    header{
+        height: 100vh;
+        width: 100vw;
+        background: url(../images/4-04.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container{
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 1;
+    } 
+}
